@@ -88,6 +88,7 @@ const buildSite = () => {
 
     fs.copyFileSync('source/github-markdown.css', 'public/github-markdown.css');
     fs.copyFileSync('source/googled9fa17550ecee20b.html', 'public/googled9fa17550ecee20b.html');
+    fs.copyFileSync('source/baidu_verify_codeva-rRfTA5ulqQ.html', 'public/baidu_verify_codeva-rRfTA5ulqQ.html');
 
     const imgs = fs.readdirSync('posts/imgs/');
     for (let img of imgs) {
