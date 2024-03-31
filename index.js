@@ -84,12 +84,12 @@ const buildSite = () => {
         ejs.renderFile('source/post.ejs', post).then(postPage => {
             fs.writeFileSync(`public/${post.title}.html`, postPage);
         });
+        fs.writeFileSync('urls.txt',`https://note.foolgry.top/${post.title}.html\n`, {flag: 'a+'})
     }
 
     fs.copyFileSync('source/github-markdown.css', 'public/github-markdown.css');
     fs.copyFileSync('source/googled9fa17550ecee20b.html', 'public/googled9fa17550ecee20b.html');
-    fs.copyFileSync('source/baidu_verify_codeva-rRfTA5ulqQ.html', 'public/baidu_verify_codeva-rRfTA5ulqQ.html');
-
+   
     const imgs = fs.readdirSync('posts/imgs/');
     for (let img of imgs) {
         fs.copyFileSync(`posts/imgs/${img}`, `public/imgs/${img}`)
