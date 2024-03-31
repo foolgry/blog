@@ -27,7 +27,7 @@ const getDirInfo = (dir) => {
 
 const createSitemap = (postData) => {
     // Creates a sitemap object given the input configuration with URLs
-    const sitemap = new SitemapStream({ hostname: 'https://blog.foolgry.top' });
+    const sitemap = new SitemapStream({ hostname: 'https://note.foolgry.top' });
 
     const writeStream = createWriteStream('public/sitemap.xml');
     sitemap.pipe(writeStream);
