@@ -33,7 +33,7 @@ const createSitemap = (postData) => {
     sitemap.pipe(writeStream);
 
     for (const post of postData) {
-        sitemap.write(`${post.title}.html`);
+        sitemap.write(`${post.title}`);
     }
     sitemap.end();
     writeStream.end();
